@@ -38,9 +38,9 @@ library('dichromat')
 
 #ann_colors
 ann_colors<- list(
-  Function_Classification = c("Glucogenesis"= "#fef0d9", "Glucose transport"="#e0ecf4",
-                              "Glycogen biosynthesis"="#fdbb84","Glycogenolysis"="#9ebcda",
-                              "Glycolysis"="#e34a33","Oxidative phosphorylation"="#8856a7"))
+  Function_Classification = c("Glucogenesis"= "#fef0d9", "Glucose transport"="#fdd49e",
+                              "Glycogen biosynthesis"="#fdbb84","Glycogenolysis"="#fc8d59",
+                              "Glycolysis"="#e34a33","Oxidative phosphorylation"="#b30000"))
 
 
 pheatmap(new_data2[,1:2],cluster_rows=F, cluster_cols=FALSE,na_col = "grey90",
@@ -52,5 +52,7 @@ pheatmap(new_data2[,1:2],cluster_rows=F, cluster_cols=FALSE,na_col = "grey90",
          cellwidth = 20, cellheight = 20,
          gaps_row =c(6,16) ,gaps_col = c(1,2),
          fontsize_number = 6,
+         #annotation_row = annotation_row,
+         #annotation_colors = ann_colors
          )
 
